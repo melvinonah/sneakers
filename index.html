@@ -147,7 +147,7 @@
     <h2 class="reviews__header">Reviews</h2>
     <div class="review">
       <div class="review__user--info">
-        <img src="images/image-avatar.png" class="nav__profile" alt="">
+        <img src="images/image-avatar.png" class="nav__profile review__user--profile" alt="">
         <h4 class="review__user--name">Melvin Onah</h4>
         <p class="review__rating">4.5 out of 5</p>
       </div>
@@ -185,30 +185,34 @@
         <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis magnam animi esse impedit vero facere veniam totam minus officia officiis dolor natus architecto reiciendis voluptatem perspiciatis, similique ex! Velit, culpa.</p>
       </div>
     </div>
-    <div class="write--review">
-      <form action="submit" method="get" class="review">
-        <div>
-          <label for="">Your Name</label>
-          <input type="text" id="review" name="name">
-        </div>
-
-        <div>
-          <label for="text">Your Rating</label>
-          <input type="text" name="rating" id="">
-        </div>
-
-        <div>
-          <label for="text">Your Review</label>
-        <input type="text" name="review">
-        </div>
-        
-
-        <button>Submit Form</button>
-      </form>
-    </div>
   </section>
-    
-  
-  
+  <section class="write--review">
+    <div class="review-form">
+      <h3>Write a review!</h3>
+    <form action="submit" method="get">
+      <div>
+        <label class="reviewLabel" for="name">Your Name</label>
+        <input type="text" class="reviewInput reviewInput--name" id="review" name="name">
+      </div>
+
+      <div>
+        <label class="reviewLabel" for="ratingNumber">Your Rating (On a scale of 1 - 5)</label>
+        <input type="text" class="reviewInput reviewInput--rating" name="rating" id="ratingNumber">
+      </div>
+
+      <div>
+        <label class="reviewLabel" for="yourReview">Your Review</label>
+      <textarea class="textarea" name="Your Review" id="yourReview" cols="30" rows="10"></textarea>
+      </div>
+
+      <button class="submitReview" type="submit">Submit Form</button>
+    </div>
+    </form>
+  </section>
+  <footer>
+    <div class="footer--text">
+      <span class="copySign">&copy;</span> 2022 Sneakers, Personal Project by Melvin Onah
+    </div>
+  </footer>  
 </body>
 </html>

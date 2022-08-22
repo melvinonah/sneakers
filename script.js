@@ -6,22 +6,22 @@ const user1 = {
     cart: [
         {
             name: 'Limited Fall Edition Sneakers',
-            price: 250,
+            price: 125,
             quantity: 1
         },
         {
             name: 'Limited Fall Edition Sneakers',
-            price: 250,
+            price: 125,
             quantity: 2
         },
         {
             name: 'Limited Fall Edition Sneakers',
-            price: 250,
+            price: 125,
             quantity: 2
         },
         {
             name: 'Limited Fall Edition Sneakers',
-            price: 250,
+            price: 125,
             quantity: 2
         }
     ]
@@ -46,8 +46,11 @@ const revealBtn = document.querySelector('.reveal-btn');
 const hiddenContent = document.querySelector('.hidden__content')
 const dropDownIcon = document.querySelector('.dropdown--icon');
 const dropDownText = document.querySelector('.product__dropdown--text');
-
-
+const reviewInputName = document.querySelector('.reviewInput--name')
+const reviewText = document.querySelector('.textarea');
+const reviewRating = document.querySelector('.reviewInput--rating');
+const submitReview = document.querySelector('.submitReview');
+const reviewsSection = document.querySelector('.reviews');
 
 // dropDownIcon.addEventListener('click', function(){
 //     dropDownIcon.classList.toggle('rotate');
@@ -194,7 +197,26 @@ addCartBtn.addEventListener('click', function(){
 
 })
 
+submitReview.addEventListener('click', function(e){
+    e.preventDefault();
+    console.log(typeof reviewRating.value);
+    
+    if(typeof +reviewRating.value !== 'number'){
+        alert('Please enter a valid Rating Value');
+    }
 
+    const reviewMarkup = `<div class="review">
+      <div class="review__user--info">
+        <img src="images/image-avatar.png" class="nav__profile" alt="">
+        <h4 class="review__user--name">${reviewInputName.value}</h4>
+        <p class="review__rating">${reviewRating.value} out of 5</p>
+      </div>
+      <div class="review__text">
+        <p>${reviewText.value}</p>
+      </div>`
+
+      reviewsSection.insertAdjacentHTML('beforeend', reviewMarkup);
+})
 
 
 // // deleteItem.addEventListener('click', function(e){
