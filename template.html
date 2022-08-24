@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+  <script src="script.js" defer></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+    <nav class="nav">
+      <img src="images/icon-menu.svg" class="hamburger--menu" alt="Hamburger--menu">
+      <img src="images/logo.svg" class="logo" alt="">
+      <ul class="nav__links">
+        <li class="nav__item"><a href="" class="nav__link nav__link--2">LOGIN AS ADMIN</a></li>
+      </ul>
+      <div class="nav__cta">
+        <img src="images/icon-cart.svg" alt="Cart" class="cart nav__cart">
+        <img src="images/image-avatar.png" alt="" class="nav__profile">
+      </div>
+    </nav>
+    <nav class="mobile-nav hidden">
+      <img src="images/icon-close.svg" class="mobile-nav-close" alt="">
+      <ul class="nav__links--mobile">
+        <li class="nav__item"><a href="" class="nav__link nav__link--2 pointer">Collections</a></li>
+        <li class="nav__item"><a href="" class="nav__link nav__link--3 pointer">Men</a></li>
+        <li class="nav__item"><a href="" class="nav__link nav__link--4 pointer">Women</a></li>
+        <li class="nav__item"><a href="" class="nav__link nav__link--5 pointer">About</a></li>
+        <li class="nav__item"><a href="" class="nav__link nav__link--6 pointer">Contact</a></li>
+      </ul>
+    </nav>
+  <main>
+    <div class="cart__section hidden">
+      <h4>Cart</h4>
+      <div class="cart--items">
+      </div>
+      <button class="checkout--btn">Checkout</button>
+    </div>
+    <div class="product">
+      <div class="carousel">
+        <img src="images/icon-previous-white.svg" alt="Previous Icon" id="previous" class="carousel__button previous">
+        <div class="product__picture">
+          <img src="images/image-product-1.jpg" alt="Main Picture" class="hero__picture hero__picture--1">
+          <img src="images/image-product-2.jpg" alt="Main Picture" class="hero__picture">
+          <img src="images/image-product-3.jpg" alt="Main Picture" class="hero__picture">
+        </div>
+        <img src="images/icon-next-white.svg" alt="Previous Icon" id="next" class="carousel__button next">
+      </div>
+      
+      <div class="product__info">
+        <h4 class="hero--subhead">Sneaker Company</h4>
+        <h2 class="product__name">Fall Limited Edition Sneakers</h2>
+        <p class="product__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero, impedit molestias quod sint dolore repudiandae cum asperiores non sed debitis nulla mollitia quasi perferendis blanditiis, error quos maxime eveniet.
+        </p>  
+          <div class="product__pricing">
+            <div class="price__details">
+              <div class="price">
+                <h3>$<span class="price__value">125.00</span></h3>
+              </div>
+              <div class="sale">
+                <p><span class="sale__value">50</span>%</p>
+              </div>
+            </div>
+            <p class="original__price">
+              <strike>$<span class="original__value">250.00</span></strike> 
+            </p>
+          </div>   
+          <div class="product-cta">
+            <div class="action--items">
+              <img src="images/icon-minus.svg" onclick="decrement()" alt="remove-item" class="remove--item">
+              <span class="item--amount">2</span>
+              <img src="images/icon-plus.svg" onclick="increment()" alt="remove-item" class="add--item">
+            </div>
+            <div class="add--cart">
+              <img src="images/icon-cart-white.svg" class="cart cta__cart" alt="">
+              <p>Add to cart</p>
+            </div>  
+          </div>
+        </div>
+  </main>
+  <section class="accordion">
+    <div>
+      <input type="checkbox" name="product_accordion" id="section1" class="accordion__input">
+      <label for="section1" class="accordion__label">Product Description</label> 
+      <div class="accordion__content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod porro fuga unde ipsum quis repellat laborum, hic sunt ab distinctio molestiae ullam voluptates minima nostrum possimus fugiat asperiores explicabo sequi.
+          Esse, eum dicta. Soluta a placeat dolores laudantium quibusdam hic ratione libero fugit officia! Dolor esse reiciendis officiis voluptatum dignissimos corporis doloremque totam inventore et. Molestias fugit quod ducimus tempore!
+          Exercitationem vero cumque fuga ipsam porro totam mollitia at, dolore, nostrum maxime unde laboriosam numquam id aperiam sequi? Illum corporis enim non aliquam doloribus laboriosam dicta in vero quasi consectetur.
+          Vitae voluptate, illum ratione commodi dolores soluta veniam repudiandae accusantium dolore dolor sequi porro minima nisi veritatis labore aut! Porro ut a minima illum suscipit dolore iusto quae atque molestias.
+        </p>
+      </div>
+    <div>
+    <div>
+      <input type="checkbox" name="product_accordion" id="section2" class="accordion__input">
+      <label for="section2" class="accordion__label">Product Specification</label> 
+      <div class="accordion__content">
+          <ul class="section__list">
+            <li>
+              <h4>Brand</h4>
+              <p>Lorem
+              </p>
+            </li>
+            <li>
+              <h4>Color</h4>
+              <p>Orange</p>
+            </li>
+            <li>
+              <h4>Manufacturer</h4>
+              <p>Lorem Industries</p>
+            </li>
+            <li>
+              <h4>Manufacturer Serial Number</h4>
+              <p>ib3fnj3eiue3b</p>
+            </li>
+          </ul>
+      </div>
+    <div>
+    <div>
+      <input type="checkbox" name="product_accordion" id="section3" class="accordion__input">
+      <label for="section3" class="accordion__label">Warranty</label> 
+      <div class="accordion__content">
+        <ul class="section__list">
+          <li>
+            <h4>Warranty Length</h4>
+            <p>3-months Warranty
+            </p>
+          </li>
+          <li>
+            <h4>Warranty Type</h4>
+            <p>Refund</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="reviews">
+    <h2 class="reviews__header">Reviews</h2>
+    <div class="review">
+      <div class="review__user--info">
+        <img src="images/image-avatar.png" class="nav__profile review__user--profile" alt="">
+        <h4 class="review__user--name">Melvin Onah</h4>
+        <p class="review__rating">4.5 out of 5</p>
+      </div>
+      <div class="review__text">
+        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis magnam animi esse impedit vero facere veniam totam minus officia officiis dolor natus architecto reiciendis voluptatem perspiciatis, similique ex! Velit, culpa.</p>
+      </div>
+    </div>
+    <div class="review">
+      <div class="review__user--info">
+        <img src="images/image-avatar.png" class="nav__profile" alt="">
+        <h4 class="review__user--name">Melvin Onah</h4>
+        <p class="review__rating">4.7 out of 5</p>
+      </div>
+      <div class="review__text">
+        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis magnam animi esse impedit vero facere veniam totam minus officia officiis dolor natus architecto reiciendis voluptatem perspiciatis, similique ex! Velit, culpa.</p>
+      </div>
+    </div>
+    <div class="review">
+      <div class="review__user--info">
+        <img src="images/image-avatar.png" class="nav__profile" alt="">
+        <h4 class="review__user--name">Melvin Onah</h4>
+        <p class="review__rating">4.8 out of 5</p>
+      </div>
+      <div class="review__text">
+        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis magnam animi esse impedit vero facere veniam totam minus officia officiis dolor natus architecto reiciendis voluptatem perspiciatis, similique ex! Velit, culpa.</p>
+      </div>
+    </div>
+    <div class="review">
+      <div class="review__user--info">
+        <img src="images/image-avatar.png" class="nav__profile" alt="">
+        <h4 class="review__user--name">Melvin Onah</h4>
+        <p class="review__rating">4.4 out of 5</p>
+      </div>
+      <div class="review__text">
+        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis magnam animi esse impedit vero facere veniam totam minus officia officiis dolor natus architecto reiciendis voluptatem perspiciatis, similique ex! Velit, culpa.</p>
+      </div>
+    </div>
+  </section>
+  <section class="write--review">
+    <div class="review-form">
+      <h3>Write a review!</h3>
+    <form action="submit" method="get">
+      <div>
+        <label class="reviewLabel" for="name">Your Name</label>
+        <input type="text" class="reviewInput reviewInput--name" id="review" name="name">
+      </div>
+
+      <div>
+        <label class="reviewLabel" for="ratingNumber">Your Rating (On a scale of 1 - 5)</label>
+        <input type="text" class="reviewInput reviewInput--rating" name="rating" id="ratingNumber">
+      </div>
+
+      <div>
+        <label class="reviewLabel" for="yourReview">Your Review</label>
+      <textarea class="textarea" name="Your Review" id="yourReview" cols="30" rows="10"></textarea>
+      </div>
+
+      <button class="submitReview" type="submit">Submit Form</button>
+    </div>
+    </form>
+  </section>
+  <footer>
+    <div class="footer--text">
+      <span class="copySign">&copy;</span> 2022 Sneakers, Personal Project by Melvin Onah
+    </div>
+  </footer>  
+</body>
+</html>
