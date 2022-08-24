@@ -132,6 +132,7 @@
     border-bottom-right-radius: 2rem; */
     text-align: left;
     overflow: hidden;
+    cursor: pointer;
     
 }
 
@@ -151,7 +152,7 @@
     border-top-right-radius: 2rem; */
 }
 
-.product--picture--1 {
+/* .product--picture--1 {
     background-image: url(images/shoepicture.jpg);
 }
 
@@ -171,13 +172,11 @@
 
 .product--picture--5 {
     background-image: url(images/shoepicture5.jpg);
-    /* background-position-y: -4rem; */
 }
 
 .product--picture--6 {
     background-image: url(images/shoepicture6.jpg);
-    /* background-position-y: -4rem; */
-}
+} */
 
 .product-name {
     font-size: 2rem;
@@ -194,7 +193,10 @@
 .product-details {
     display: flex;
     justify-content: space-between;
+    align-content: center;
 }
+
+
 
 .action--items {
     width: 40%;
@@ -212,9 +214,20 @@
     font-size: 2rem;
 }
 
+.add--item {
+    width: 5rem;
+    height: 5rem;
+}
+
+.remove--item {
+    width: 5rem;
+    height: 2rem;
+}
+
 .add--cart {
     margin-top: 2rem;
     height: 6.3rem;
     border-radius: 0;
+    cursor: pointer;
     /*  */
 }
